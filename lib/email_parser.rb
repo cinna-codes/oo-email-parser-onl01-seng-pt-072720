@@ -9,7 +9,7 @@ class EmailAddressParser
 
   def parse
     @email_addresses = email_addresses.split(/[, ]/).delete_if { |ad| ad == "" }
-    @email_addresses
+    #@email_addresses
   end
 
 end
