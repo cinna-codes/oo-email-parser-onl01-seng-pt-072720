@@ -8,7 +8,7 @@ class EmailAddressParser
   attr_accessor :email_addresses
 
   def parse
-    @email_addresses = self.split(/[, ]/).delete_if { |ad| ad == "" }
+    @email_addresses = self.split(/[, ]/).reject(&:empty?) #delete_if { |ad| ad == "" }
     #@email_addresses
   end
 
